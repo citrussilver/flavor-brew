@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Roboto&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --colorTextBody: #2c2e2f;
+    --colorPrimary: #004f47;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

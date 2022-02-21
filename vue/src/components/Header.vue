@@ -1,0 +1,43 @@
+<template>
+  <div>
+      <div id="sticky-header-wrap">
+        <header id="site-header">
+          <div class="page-width">
+            <div id="nav-items" class="flex justify-between">
+              <!-- <div class="m-5"><router-link :to="{ name: 'Main' }"><img :src="getImageUrl()" alt="logo"></router-link></div> -->
+              <div class="flex items-center m-4 lg:text-3xl md:text-2xl">
+                <router-link :to="{ name: 'Main' }">
+                  flavor brew
+                  <!-- <img :src="getImageUrl()" alt="logo"> -->
+                </router-link>
+              </div>
+              <div>
+                <ul class="flex m-4">
+                  <router-link :to="{name: 'Login'}"><li class="m-4 hover:text-green-900">Shop</li></router-link>
+                  <router-link :to="{name: 'Login'}"><li class="m-4 hover:text-green-900">Journal</li></router-link>
+                  <router-link :to="{name: 'Login'}"><li class="m-4 hover:text-green-900">About</li></router-link>
+                </ul>
+              </div>
+              <div id="site-nav-icons" class="flex items-center m-4">
+                <router-link :to="{name: 'Login'}"><span class="material-icons m-4 hover:text-green-900">person</span></router-link>
+                <router-link :to="{name: 'Login'}"><span class="material-icons m-4 hover:text-green-900">search</span></router-link>
+                <router-link :to="{name: 'Login'}"><span class="material-icons m-4 hover:text-green-900">shopping_cart</span></router-link>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+  </div>
+</template>
+
+<script setup>
+let targetImg = 'flavor_brew-logo-black_140x.webp';
+
+function getImageUrl() {
+  return new URL(`../assets/img/${targetImg}`, import.meta.url).href;
+}
+</script>
+
+<style>
+
+</style>
