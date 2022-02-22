@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DefaultLayout from '../components/DefaultLayout.vue'
 import AuthLayout from '../components/AuthLayout.vue'
+import ProductView from '../components/ProductView.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Main from '../views/Main.vue'
 import Login from '../views/Login.vue'
@@ -9,11 +10,6 @@ import Register from '../views/Register.vue'
 import store from '../store'
 
 const routes = [
-    {
-      path: '/home',
-      name: 'Main',
-      component: Main,
-    },
     {
         path: '/',
         redirect: '/dashboard',
@@ -35,11 +31,18 @@ const routes = [
         ]
     },
     {
+        path: '/home',
+        name: 'Main',
+        component: Main,
+    },
+    {
         path: '/auth',
         redirect: '/login',
         name: 'Auth',
         component: AuthLayout,
-        meta: {isGuest: true},
+        meta: {
+            isGuest: true
+        },
         children: [
             {
                 path: '/login',
@@ -53,6 +56,14 @@ const routes = [
             },
         ]
     },
+    {
+        path: '/products',
+        name: 'ProductView',
+        component: ProductView,
+        meta: {
+            isGuest: true
+        },
+    }
     
 ];
 
