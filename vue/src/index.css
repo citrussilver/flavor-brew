@@ -7,8 +7,68 @@
 :root {
     --colorTextBody: #2c2e2f;
     --colorPrimary: #004f47;
+    --anim-timing-func: ease-in-out;
+    --anim-duration: 0.8s;
+    --anim-fill-mode: forwards;
+    --cream-white: #f7f3ee;
+    --special-font: 'Hind Siliguri', sans-serif;
+    --commont-font: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--commont-font);
+}
+
+.special-font {
+    font-family: var(--special-font);
+}
+
+.min-h-30rem {
+    min-height: 30.6rem;
+}
+
+.cream-white {
+    background-color: var(--cream-white);   
+}
+
+.zoom-out-box {
+    opacity: 0;
+    overflow: hidden;
+    /*animation: zoom-in-zoom-out var(--anim-duration) 1s ease var(--anim-fill-mode);*/
+    animation-name: zoom-out;
+    animation-timing-function: var(--anim-timing-func);
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fill-mode);
+}
+
+.zoom-out-box-2 {
+    opacity: 0;
+    overflow: hidden;
+    /*animation: zoom-in-zoom-out var(--anim-duration) 1s ease var(--anim-fill-mode);*/
+    animation-name: zoom-out;
+    animation-timing-function: var(--anim-timing-func);
+    animation-delay: 0.5s;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fill-mode);
+}
+
+.zoom-out-box-3 {
+    opacity: 0;
+    overflow: hidden;
+    /*animation: zoom-in-zoom-out var(--anim-duration) 1s ease var(--anim-fill-mode);*/
+    animation-name: zoom-out;
+    animation-timing-function: var(--anim-timing-func);
+    animation-delay: 1s;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fill-mode);
+}
+
+@keyframes zoom-out {
+  0% {
+      transform: scale(1.25, 1.25);
+  }
+  100% {
+      transform: scale(1, 1);
+      opacity: 1;
+  }
 }
