@@ -31,6 +31,12 @@ body {
     background-color: var(--cream-white);   
 }
 
+.flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .zoom-out-box {
     opacity: 0;
     overflow: hidden;

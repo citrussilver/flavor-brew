@@ -13,9 +13,9 @@
               </div>
               <div>
                 <ul class="flex m-4">
-                  <router-link :to="{name: 'Login'}"><li class="lg:m-4 m-2 hover:text-green-900">Shop</li></router-link>
-                  <router-link :to="{name: 'Login'}"><li class="lg:m-4 m-2 hover:text-green-900">Journal</li></router-link>
-                  <router-link :to="{name: 'Login'}"><li class="lg:m-4 m-2 hover:text-green-900">About</li></router-link>
+                  <router-link :to="{name: 'Store'}"><li class="lg:m-4 m-2 hover:text-green-900">Shop</li></router-link>
+                  <router-link :to="{name: 'Journal'}"><li class="lg:m-4 m-2 hover:text-green-900">Journal</li></router-link>
+                  <router-link :to="{name: 'About'}"><li class="lg:m-4 m-2 hover:text-green-900">About</li></router-link>
                 </ul>
               </div>
               <div id="site-nav-icons" class="flex items-center m-4">
