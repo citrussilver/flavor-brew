@@ -79,8 +79,8 @@
                     <img src="../assets/img/ratio_six_detail.jpg" alt="item_image">
                 </div> -->
                 <div class="cream-white px-8 flex flex-grow flex-col gap-2">
-                    <h1 class="xl:text-3xl xl:mb-6 lg:text-2x pt-4">test</h1>
-                    <div class="mb-2">$test.00</div>
+                    <h1 class="xl:text-3xl xl:mb-6 lg:text-2x pt-4">Ratio Six</h1>
+                    <div class="mb-4">$365.00</div>
                     <div class="mb-6">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
@@ -88,7 +88,6 @@
                         <span class="material-icons">star</span>
                         <span class="material-icons">star_border</span>
                     </div>
-                    <div>(test Reviews)</div>
                     <hr class="w-4/6"/>
                     <div class="mb-4">
                         <p class="w-7/12">Thanks to Ratio Six, world-class coffee is more accessible than ever. Engineered with the brewing precision of the Ratio Eight, the Six offers the one-button convenience of its bigger sibling with a leaner form and lighter price.</p>
@@ -111,26 +110,6 @@
 
 <script setup>
 import CommonLayout from '../components/CommonLayout.vue';
-import { defineProps } from 'vue';
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-
-const props = defineProps(
-    {
-        productData: {
-            imgUrl: String,
-            productName: String,
-            reviewCount: Number,
-            starCount: Number,
-            price: Number
-        }
-    }
-);
-
-
-console.log(route.params.data.productName);
-
 </script>
 
 <style>

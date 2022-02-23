@@ -2,10 +2,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DefaultLayout from '../components/DefaultLayout.vue'
 import AuthLayout from '../components/AuthLayout.vue'
 import ProductView from '../components/ProductView.vue'
+import ProductViewB from '../components/ProductViewB.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Main from '../views/Main.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Store from '../views/Store.vue'
+import Journal from '../views/Journal.vue'
+import About from '../views/About.vue'
 
 import store from '../store'
 
@@ -57,13 +61,34 @@ const routes = [
         ]
     },
     {
-        path: '/products',
+        path: '/shop',
+        name: 'Store',
+        component: Store,
+    },
+    {
+        path: '/blogs',
+        name: 'Journal',
+        component: Journal,
+    },
+    {
+        path: '/products/',
         name: 'ProductView',
+        props: true,
         component: ProductView,
+    },
+    {
+        path: '/collections',
+        name: 'ProductViewB',
+        component: ProductViewB,
         meta: {
             isGuest: true
         },
-    }
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: About,
+    },
     
 ];
 
